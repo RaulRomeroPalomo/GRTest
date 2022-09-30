@@ -22,6 +22,8 @@ public class TicketModel {
     private Long lineIdentifier;
     private String description;
     private Integer amount;
+    
+    
     public Long getId() {
         return id;
     }
