@@ -24,7 +24,16 @@ public class TicketModel {
     private Integer amount;
     
     
-    public Long getId() {
+    
+    public TicketModel(Integer totalAmount, Long lineIdentifier, String description, Integer amount) {
+		super();
+		this.creationDate = new Date();
+		this.totalAmount = totalAmount;
+		this.lineIdentifier = lineIdentifier;
+		this.description = description;
+		this.amount = amount;
+	}
+	public Long getId() {
         return id;
     }
     public void setId(Long id) {
