@@ -1,6 +1,6 @@
 package com.example.demo.models;
 
-import java.util.Date;
+import java.sql.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -23,16 +23,6 @@ public class TicketModel {
     private String description;
     private Integer amount;
     
-    
-    
-    public TicketModel(Integer totalAmount, Long lineIdentifier, String description, Integer amount) {
-		super();
-		this.creationDate = new Date();
-		this.totalAmount = totalAmount;
-		this.lineIdentifier = lineIdentifier;
-		this.description = description;
-		this.amount = amount;
-	}
 	public Long getId() {
         return id;
     }

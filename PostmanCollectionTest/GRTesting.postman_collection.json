@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "e961d5ef-c287-403f-b0ea-1ceef4b801d8",
+		"name": "GRTesting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3352455"
+	},
+	"item": [
+		{
+			"name": "Get all tickets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/tickets",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tickets"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get ticket by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ticket/:ticketId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ticket",
+						":ticketId"
+					],
+					"variable": [
+						{
+							"key": "ticketId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete ticket by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/ticket/delete/:ticketId",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ticket",
+						"delete",
+						":ticketId"
+					],
+					"variable": [
+						{
+							"key": "ticketId",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create ticket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"creationDate\": \"2022-10-02\",\r\n    \"totalAmount\": 40,\r\n    \"lineIdentifier\": 55,\r\n    \"description\": \"Nuevo ticket\",\r\n    \"amount\": 23\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ticket/new",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ticket",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update ticket",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"id\": 2,\r\n    \"creationDate\": \"2022-10-03\",\r\n    \"totalAmount\": 41,\r\n    \"lineIdentifier\": 56,\r\n    \"description\": \"Ticket actualizado\",\r\n    \"amount\": 24\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/ticket/update",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"ticket",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get tickets between dates",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/tickets/between?from=2010-10-02&to=2022-10-02",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tickets",
+						"between"
+					],
+					"query": [
+						{
+							"key": "from",
+							"value": "2010-10-02"
+						},
+						{
+							"key": "to",
+							"value": "2022-10-02"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

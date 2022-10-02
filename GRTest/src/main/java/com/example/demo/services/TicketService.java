@@ -1,7 +1,7 @@
 package com.example.demo.services;
 
 import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -47,7 +47,7 @@ public class TicketService {
 		
 	}
 	
-	public List<TicketModel> getTicketsByDateRange(Date from, Date to){
-		return ticketRepository.getTicketsByDateRange(from, to);
+	public List<TicketModel> getTicketsBetweenDates(Date from, Date to){
+		return ticketRepository.findByCreationDateBetween(from, to);
 	}
 }
